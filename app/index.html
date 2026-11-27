@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deal Beacon — Real Black Friday Deals 2026</title>
+<meta name="description" content="A Black Friday deal finder with real, checked prices: 37 deals at Amazon, Best Buy, Target and Walmart, each with its store link, check time and an honest verdict on whether it is really a deal.">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <h1>Deal <span class="beacon">Beacon</span></h1>
+    <p>Real Black Friday &amp; Cyber Monday deals, checked by hand — not scraped, not guessed. Every price was read at the store or in a deals roundup that names the store, and every deal carries its check time, its source, and an honest verdict.</p>
+    <p class="checked-line" id="checkedLine"><strong>All prices checked 27 Nov 2026, 09:40 UTC</strong> · Sale window: Black Friday Week, 19–30 Nov 2026</p>
+  </header>
+
+  <section class="stats" id="statsBar" aria-label="Deal summary"></section>
+
+  <section class="controls" aria-label="Search and filter deals">
+    <input type="search" id="searchBox" placeholder="Search a product, store or brand…" aria-label="Search deals">
+    <label>Category
+      <select id="categorySelect" aria-label="Filter by category">
+        <option value="All">All categories</option>
+      </select>
+    </label>
+    <label>Store
+      <select id="storeSelect" aria-label="Filter by store">
+        <option value="All">All stores</option>
+      </select>
+    </label>
+    <label>Min. discount
+      <select id="discountSelect" aria-label="Filter by minimum discount">
+        <option value="0">Any discount</option>
+        <option value="25">25% off or more</option>
+        <option value="40">40% off or more</option>
+        <option value="50">50% off or more</option>
+      </select>
+    </label>
+    <label>Verdict
+      <select id="signalSelect" aria-label="Filter by verdict">
+        <option value="All">Any verdict</option>
+        <option value="NEW LOW">New low only</option>
+        <option value="STRONG">Strong deal</option>
+        <option value="ROUTINE">Routine sale</option>
+      </select>
+    </label>
+    <label>Sort
+      <select id="sortSelect" aria-label="Sort deals">
+        <option value="signal">Best verdict first</option>
+        <option value="discount">Biggest discount %</option>
+        <option value="savings">Biggest $ saving</option>
+        <option value="price-low">Lowest price</option>
+        <option value="price-high">Highest price</option>
+      </select>
+    </label>
+    <button type="button" id="clearFilters">Clear filters</button>
+  </section>
+
+  <p class="result-count" id="resultCount">Showing all deals</p>
+
+  <main class="grid" id="dealGrid" aria-live="polite"></main>
+
+  <section class="legend" aria-label="How to read the verdicts">
+    <h2>How to read the verdict</h2>
+    <ul>
+      <li><span class="signal signal-newlow">★ NEW LOW</span> — the lowest price the cited source has ever tracked for this product.</li>
+      <li><span class="signal signal-strong">● STRONG DEAL</span> — a deep cut: 25% or more off, or a large dollar saving against the usual price.</li>
+      <li><span class="signal signal-routine">○ ROUTINE SALE</span> — a real discount, but a small one. Worth knowing before you buy, not a reason to rush.</li>
+    </ul>
+  </section>
+
+  <section class="method" aria-label="How deals were checked">
+    <h2>How these deals were checked</h2>
+    <p><strong>Found and checked on 27 Nov 2026 (Black Friday).</strong> Each deal was read in a deals roundup that names its store — 9to5Mac, MacRumors, 9to5Google, 9to5Toys, Best Buy's own Black Friday release, Benzinga, UltraGamerZ, FlashDealFeed, CNN Underscored, ComicBook and Yahoo Shopping — or at the store itself. The sale price and the usual price on each card are exactly what that source reported; the discount % is computed from the two prices, so the numbers always add up.</p>
+    <p><strong>Store links</strong> open the store's own search page for that product, so the link always opens the matching product at the store. Prices can change or sell out during Black Friday week — confirm the price at the store before you buy.</p>
+    <p><strong>Same product, two stores?</strong> Where a product is on sale at two stores (AirPods Pro 3, MacBook Air M5), both listings are shown so you can compare them side by side instead of trusting one price.</p>
+  </section>
+
+  <footer>Deal Beacon · Black Friday 2026 · Prices checked 27 Nov 2026, 09:40 UTC · Not affiliated with any store named here.</footer>
+</div>
+</body>
+</html>
